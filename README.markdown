@@ -15,6 +15,7 @@ Ensure Git is installed and configured. Open a terminal and run:
 mkdir git-lab && cd git-lab
 git init
 
+
 Create an initial commit:
 
 echo "Initial commit" > file.txt
