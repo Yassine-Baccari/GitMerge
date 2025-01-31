@@ -49,15 +49,16 @@ git log --oneline --graph --all
 git checkout master
 git merge feature-branch
 
-Handling Merge Conflicts:
+If a merge conflict occurs: Handling Merge Conflicts:
 
-If a merge conflict occurs:
 git status
 # Manually resolve conflicts in the conflicted files
 git add <resolved-files>
 git commit -m "Resolve merge conflict"
 
 git log --oneline --graph --all
+
 Result: A merge commit is created, preserving both branch histories.
+
 =============
 
