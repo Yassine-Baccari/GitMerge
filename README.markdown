@@ -26,7 +26,7 @@ git log --oneline --graph --all
 
 Create a new branch:
 
-git checkout -b feature-branch
+git checkout -b feature-branch\n
 echo "Feature 1" >> file.txt
 cat file.txt
 git add file.txt
