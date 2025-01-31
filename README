@@ -62,3 +62,41 @@ Result: A merge commit is created, preserving both branch histories.
 
 =============
 
+2. Git Rebase
+
+Reset the repository to pre-merge state:
+
+git reset --hard HEAD~1
+
+Rebase feature-branch onto master:
+
+git checkout feature-branch
+git rebase master
+
+If a merge conflict occurs: Handling Merge Conflicts:
+
+git status
+# Manually resolve conflicts in the conflicted files
+git add <resolved-files>
+git rebase --continue
+
+git log --oneline --graph --all
+
+Switch to master and fast-forward:
+
+git checkout master
+git merge feature-branch
+
+Result: The commit history is linear, as if feature-branch was developed directly on master.
+
+=============
+
+Summary
+
+Command: Behavior
+
+git merge: Preserves branch history, creates a merge commit
+
+git rebase: Rewrites commit history, making it linear
+
+Use merge for a complete history and rebase for a cleaner, linear history.
